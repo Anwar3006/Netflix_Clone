@@ -31,7 +31,7 @@ const Auth = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [username, password]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
@@ -42,7 +42,7 @@ const Auth = () => {
     } catch (error: any) {
       console.log(error);
     }
-  }, [username, email, password]);
+  }, [username, email, password, login]);
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpeg')] bg-cover bg-fixed bg-no-repeat">

@@ -8,11 +8,11 @@ interface AccountMenuProps {
 }
 
 const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
+  const { data: currentUser } = useCurrentUser();
+
   if (!visible) {
     return null;
   }
-
-  const { data: currentUSer } = useCurrentUser();
 
   return (
     <div className="bg-black w-56 py-5 absolute top-14 right-0 flex flex-col border-2 border-gray-800 rounded-md">
@@ -24,7 +24,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
             alt="Profile"
           />
           <p className="text-white text-sm group-hover/item:underline">
-            {currentUSer?.name}
+            {currentUser?.name}
           </p>
         </div>
         <div className="px-2">
