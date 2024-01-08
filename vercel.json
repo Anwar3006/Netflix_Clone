@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "buildCommand": "npm run prisma && next build"
-  }
-}
